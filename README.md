@@ -3,6 +3,11 @@
 Simple grpc server streaming capability with Golang, this code will have server and client each:
 * Server: Will have a function that will stream 5 responses with slight delay each.
 * Client: Will send a request to server and wait on all the responses.
+
+# protoc command
+```
+protoc --go_out=. --go-grpc_opt=require_unimplemented_servers=false --go-grpc_out=. data.proto
+```
 ---
 # Running it
 Run with makefile
